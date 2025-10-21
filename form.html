@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sri Vatsha Integrated Pvt Ltd</title>
+  <style>
+    /* (your style from earlier) */
+    body { font-family: Arial, sans-serif; background:#f8f9fa; margin:0; padding:0;}
+    form { width:400px; margin:20px auto; background:#fff; padding:20px; border-radius:6px;}
+    label{font-weight:bold; display:block; margin-top:10px;}
+    input, textarea{width:100%; padding:6px; margin-top:5px; border-radius:4px; box-sizing:border-box;}
+    input[type="submit"]{background:#2e8b57;color:#fff;border:none;padding:10px;border-radius:4px;cursor:pointer;}
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center">Sri Vatsha Integrated Services PVT LTD</h2>
+  <h3 style="text-align:center">Candidate Registration Form</h3>
+
+  <form action="index.php" method="POST">
+    <label>Post Applied For:</label>
+    <input type="text" name="post" required>
+
+    <label>Name of Candidate:</label>
+    <input type="text" name="name" required>
+
+    <label>Father / Guardian Name:</label>
+    <input type="text" name="guardian" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" required>
+
+    <label>Community:</label>
+    <input type="text" name="community" required>
+
+    <label>Qualification:</label>
+    <input type="text" name="qualification" required>
+
+    <label>Aadhaar Number:</label>
+    <input type="text" name="aadhaar" maxlength="12" required>
+
+    <label>Computer Knowledge (Yes/No):</label>
+    <input type="text" name="computer" required>
+
+    <label>Previous Experience (Years):</label>
+    <input type="number" name="experience" min="0" required>
+
+    <label>Mobile Number:</label>
+    <input type="text" name="mobile" maxlength="10" required>
+
+    <label>Alternate Number:</label>
+    <input type="text" name="alternate" maxlength="10">
+
+    <label>Do you have a bike (Yes/No):</label>
+    <input type="text" name="bike" required>
+
+    <label>Do you have an Android mobile (Yes/No):</label>
+    <input type="text" name="android" required>
+
+    <label>Communication Address:</label>
+    <textarea name="address" rows="3" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
