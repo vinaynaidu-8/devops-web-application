@@ -1,128 +1,52 @@
-# AWS PHP MySQL WebApp
-This is a simple PHP web application hosted on AWS EC2 using Terraform for infrastructure setup and MySQL for data storage.
+## 1. Requirements (Before Starting) ##  
+- Ubuntu OS (local machine) → to run Terraform & connect via SSH
 
-## Features
-- Terraform to launch EC2 instance
-- Apache + PHP hosted web app
-- MySQL database connection
-- Manual deployment on AWS Free Tier
+- AWS Free Tier Account → to host EC2 instance
 
-## Project Structure
-- `form.html` – Frontend form
-- `index.php` – Backend logic
-- `terraform/` – Terraform configuration files
+- Terraform → to provision EC2 instance automatically
 
-## Deployment Steps
-1. Launch EC2 using Terraform
-2. Install Apache, PHP, and MySQL
-3. Upload project files
-4. Access the web app via EC2 public IP
-# AWS-PHP-MySQL-WebApp
-Simple PHP + MySQL form application hosted on AWS EC2 (Free Tier)
+- GitHub Account → to store project code & documentation
 
+- SSH Key Pair (.pem) → to connect securely to EC2
 
-1. AWS EC2 Instance Setup
+- Apache Web Server → to host the PHP web app
 
-   Screenshot: EC2 Dashboard showing your running Ubuntu instance.
-   Caption: “Launched Ubuntu EC2 instance on AWS for deploying a PHP-MySQL web application.”
+- PHP 8 → to run backend code
 
-2. Apache & PHP Installation
+- MySQL Server → to store submitted form data
 
-   Screenshot: Terminal showing successful Apache and PHP installation.
-   Example output:
+- Browser → to access the final hosted application
+## 2. Project Architecture ##  
+<img width="1536" height="630" alt="A simple rectangular" src="https://github.com/user-attachments/assets/d514792a-f03f-488f-a5c9-e578727c91a4" />
 
-   sudo apt update
-   sudo apt install apache2 php libapache2-mod-php -y
+## 3. Step-by-Step Implementation ##  
+- Step 1: Write Terraform Code to Launch EC2
+
+  - Created the following files:  
+main.tf  
+variables.tf  
+outputs.tf  
 
 
-   Caption: “Installed Apache web server and PHP runtime on EC2.”
+  - Terraform EC2 Setup includes:
 
-3. MySQL Installation and Database Setup
+- Step 2: Launch EC2 Instance Using Terraform
+  
+  <img width="1919" height="1016" alt="Screenshot 2025-10-22 130308" src="https://github.com/user-attachments/assets/f2b56a13-b6c6-4064-8f91-7a8e02b48c19" />
 
-   Screenshot: Terminal after running:
-
-   sudo apt install mysql-server -y
-   sudo mysql -u root -p
-
-
-   and
-
-   CREATE DATABASE vinay;
-   CREATE USER 'vinayuser'@'localhost' IDENTIFIED BY 'Vinay@123';
-   GRANT ALL PRIVILEGES ON vinay.* TO 'vinayuser'@'localhost';
-   FLUSH PRIVILEGES;
+- Step 3: Connect to EC2 via SSH
 
 
-   Caption: “Configured MySQL database and user for web application.”
+- Step 4: Install Apache, PHP, MySQL on EC2
 
-4. Table Creation
-
-   Screenshot: MySQL terminal showing:
-
-   USE vinay;
-   SHOW TABLES;
-   DESCRIBE candidates;
+- Step 5: Create MySQL Database & Table
 
 
-   Caption: “Created ‘candidates’ table in MySQL database.”
+- Step 6: Deploy Web Application
 
-5. Uploading Project Files
-
-   Screenshot: Command line showing index.php file placed in /var/www/html/.
-   Example:
-
-   sudo nano /var/www/html/index.php
+- Step 7: Access Application in Browser
 
 
-   Caption: “Deployed PHP application into Apache web root directory.”
+Screenshots
 
-6. Web Application Home Page
-
-   Screenshot: Browser showing the form (before entering data).
-   Caption: “Candidate registration form hosted on AWS EC2 public IP.”
-
-7. Filled Form Before Submission
-
-   Screenshot: Same page after filling in all details.
-   Caption: “Form filled with candidate details before submission.”
-
-8. Submission Success Message
-
-   Screenshot: Success message after submitting form (“Data submitted successfully”).
-   Caption: “Form data successfully inserted into MySQL database.”
-
-9. MySQL Data Verification
-
-   Screenshot: MySQL terminal showing:
-
-   SELECT * FROM candidates;
-
-
-   Caption: “Verified that submitted data is stored in database.”
-
-10. Security Group Configuration (Optional but Impressive)
-
-    Screenshot: EC2 Security Group showing inbound rules for ports:
-
-    22 (SSH)
-
-    80 (HTTP)
-
-    3306 (optional for MySQL remote access)
-
-    Caption: “Configured security group to allow HTTP and SSH access.”
-
-11. Apache Service Restart
-
-    Screenshot: Terminal after running:
-
-    sudo systemctl restart apache2
-    sudo systemctl status apache2
-
-
-    Caption: “Restarted Apache web server to apply changes.”
-
-12. Git Repository (Local or Remote)
-
-     Screenshot: GitHub repository showing README and project files.
-     Caption: “Uploaded project and documentation to GitHub.”
+## 5. Conclusion ##
