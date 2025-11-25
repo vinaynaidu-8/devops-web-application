@@ -1,3 +1,5 @@
+This project launches an AWS EC2 server using Terraform, installs Apache, PHP, and MySQL, and hosts a web application on it. It shows practical DevOps skills like using Terraform, working with Linux, deploying on the cloud, and connecting a backend with a database.  
+
 ## 1. Requirements (Before Starting) ##  
 - Ubuntu OS (local machine) → to run Terraform & connect via SSH
 
@@ -64,5 +66,5 @@ outputs.tf
 
 
 
-## 5. Conclusion ## 
+## 4. Conclusion ## 
   - This project successfully showcases a complete cloud deployment cycle—from launching infrastructure using Terraform to configuring an Apache–PHP–MySQL stack on     Ubuntu EC2 and deploying a real web application.
