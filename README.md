@@ -22,15 +22,8 @@ This project launches an AWS EC2 server using Terraform, installs Apache, PHP, a
 <img width="1536" height="630" alt="A simple rectangular" src="https://github.com/user-attachments/assets/d514792a-f03f-488f-a5c9-e578727c91a4" />
 
 ## 3. Step-by-Step Implementation ##  
-- Step 1: Write Terraform Code to Launch EC2
-
-  - Created the following files:  
-main.tf  
-variables.tf  
-outputs.tf  
-
-
-  - Terraform EC2 Setup includes:
+- Step 1: Write Terraform Code to Launch EC2   
+  main.tf  
 
 - Step 2: Launch EC2 Instance Using Terraform
   
@@ -50,8 +43,9 @@ outputs.tf
 
 - Step 5: Create MySQL Database & Table
 
-
 - Step 6: Deploy Web Application
+  <img width="841" height="359" alt="Screenshot 2025-10-22 131437" src="https://github.com/user-attachments/assets/cd35741b-b3f0-4959-8f14-195518a99919" />
+
 
 - Step 7: Access Application in Browser  
 
